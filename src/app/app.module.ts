@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 
 import { AppComponent } from './app.component';
-import { MyNewComponentComponent } from './components/my-new-component/my-new-component.component';
 
 import { StoreModule } from '@ngrx/store';
 import { mainReducer } from './store/reducer';
@@ -12,7 +11,6 @@ import { BoardComponent } from './components/board/board.component';
 @NgModule({
   declarations: [
     AppComponent,
-    MyNewComponentComponent,
     BoardComponent
   ],
   imports: [
