@@ -19,9 +19,14 @@
     "@angular/platform-browser": "~9.1.9",
     "@angular/platform-browser-dynamic": "~9.1.9",
     "@angular/router": "~9.1.9",
+    "@ngrx/effects": "^9.2.0",
+    "@ngrx/schematics": "^9.2.0",
+    "@ngrx/store": "^9.2.0",
+    "@ngrx/store-devtools": "^8.1.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
-    "zone.js": "~0.10.2"
+    "zone.js": "~0.10.2",
+    "ng-zorro-antd": "^9.1.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.7",

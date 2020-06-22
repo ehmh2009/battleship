@@ -1,14 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NzButtonModule } from 'ng-zorro-antd/button';
 
 import { AppComponent } from './app.component';
+import { MyNewComponentComponent } from './components/my-new-component/my-new-component.component';
+
+import { StoreModule } from '@ngrx/store';
+import { mainReducer } from './store/reducer';
+import { BoardComponent } from './components/board/board.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MyNewComponentComponent,
+    BoardComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    StoreModule.forRoot(mainReducer),
+    NzButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

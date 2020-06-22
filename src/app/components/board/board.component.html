@@ -1,0 +1,57 @@
+<table>
+  <thead>
+  <th>A</th>
+  <th>B</th>
+  <th>C</th>
+  <th>D</th>
+  <th>E</th>
+  <th>F</th>
+  <th>G</th>
+  <th>H</th>
+  <th>I</th>
+  <th>J</th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let row of board, index as r">
+    <td *ngFor="let point of row, index as c" style="width: 25px; height: 25px">
+      <ng-container *ngIf="isPlayerBoard">
+        <ng-container *ngIf="point.isShip">
+          <ng-container *ngIf="point.isChecked">
+            <button>T</button>
+          </ng-container>
+          <ng-container *ngIf="!point.isChecked">
+            <button>S</button>
+          </ng-container>
+        </ng-container>
+        <ng-container *ngIf="!point.isShip">
+          <ng-container *ngIf="point.isChecked">
+            <button>*</button>
+          </ng-container>
+          <ng-container *ngIf="!point.isChecked">
+            <button>|</button>
+          </ng-container>
+        </ng-container>
+      </ng-container>
+
+      <ng-container *ngIf="!isPlayerBoard">
+        <ng-container *ngIf="!point.isChecked">
+          <ng-container *ngIf="isPlayerPerspective">
+            <button (click)="playerShot(r, c)">?</button>
+          </ng-container>
+          <ng-container *ngIf="!isPlayerPerspective">
+            <button>.</button>
+          </ng-container>
+        </ng-container>
+        <ng-container *ngIf="point.isChecked">
+          <ng-container *ngIf="point.isShip">
+            <button>T</button>
+          </ng-container>
+          <ng-container *ngIf="!point.isShip">
+            <button>*</button>
+          </ng-container>
+        </ng-container>
+      </ng-container>
+    </td>
+  </tr>
+  </tbody>
+</table>
